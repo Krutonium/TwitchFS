@@ -1,7 +1,7 @@
 # TwitchFS
 
 TwitchFS is a FUSE filesystem that allows you to mount Twitch streams as virtual files. It enables watching Twitch
-streams through any media player that can read files.
+streams through any media player that can read the files.
 
 ## Requirements
 
@@ -17,6 +17,8 @@ What I do know is that you need:
  - Python 3.6+
   - FUSE3
   - yt-dlp
+
+For Nix(OS) users, you can `nix run` or `nix shell` as long as you have flakes enabled, even if you're not using them, and everything will be set up, as long as you have FUSE set up on your OS.
 
 ## Usage
 
@@ -61,7 +63,7 @@ What I do know is that you need:
 Contributions are welcome! If you're familiar with Python and FUSE, you can help by:
 
 - Adding VOD support
-- Implementing chat integration (FIFO Text File?)
+- Implementing chat integration (FILO Text File?)
 - Improving error handling
 - Adding support for browsers' cookies
 - Writing tests
