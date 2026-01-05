@@ -32,17 +32,14 @@ For Nix(OS) users, you can `nix run` or `nix shell` as long as you have flakes e
    ./twitchfs.py ~/twitch [channels_list_file]
    ```
 
-3. Create directories for channels you want to watch if they're not already present (in the channels list file):
-   ```bash
-   mkdir ~/twitch/channelname
-   ```
-
-4. When a channel is live, a `live.mp4` file will appear in its directory.
+3. When a channel is live, a `live.mp4` file will appear in its directory.
    You can open this file with any media player:
    ```bash
    vlc ~/twitch/channelname/live.mp4
    ```
-   This is refreshed every 5 minutes. (Note: An improvement would be to thread it and only do the RELEVANT channel, especially given that as channel count goes up, you end up in a situation where you could get blocked by Twitch.)
+   This is cached for 5 minutes.
+
+By default there will be no channels visible, but if you `cd` or `ls` a channels name, it'll return a live file - or not. If you provide a list of channels via the arguments, those directories will exist, but otherwise it works exactly the same.
 
 ## Features
 
