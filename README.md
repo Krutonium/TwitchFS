@@ -42,7 +42,7 @@ For Nix(OS) users, you can `nix run` or `nix shell` as long as you have flakes e
    ```bash
    vlc ~/twitch/channelname/live.mp4
    ```
-   This is refreshed every 5 minutes. (Note: This is currently single threaded, and checks ALL channels - An improvement would be to thread it and only do the RELEVANT channel!)
+   This is refreshed every 5 minutes. (Note: An improvement would be to thread it and only do the RELEVANT channel, especially given that as channel count goes up, you end up in a situation where you could get blocked by Twitch.)
 
 ## Features
 
